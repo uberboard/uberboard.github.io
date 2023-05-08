@@ -9,29 +9,29 @@ export default function Home() {
     return (
         <>
             <div className={[styles.backgroundImage].join(" ")}>
-                <ScrollParallax strength={.9} lerpEase={1} isAbsolutelyPositioned={true}>
+                <ScrollParallax strength={0.98} lerpEase={.95} isAbsolutelyPositioned={true}>
                     <span style={{backgroundImage: "url('/background/ocean/SVG/layer4.svg')"}}
                          className={styles.backgroundLayer}/>
                 </ScrollParallax>
-                <ScrollParallax strength={.8} lerpEase={1} isAbsolutelyPositioned={true}>
+                <ScrollParallax strength={.9} lerpEase={.95} isAbsolutelyPositioned={true}>
                     <span style={{backgroundImage: "url('/background/ocean/SVG/layer3.svg')"}}
                          className={styles.backgroundLayer}/>
                 </ScrollParallax>
-                <ScrollParallax strength={.6} lerpEase={1} isAbsolutelyPositioned={true}>
+                <ScrollParallax strength={.7} lerpEase={.95} isAbsolutelyPositioned={true}>
                     <span style={{backgroundImage: "url('/background/ocean/SVG/layer2.svg')"}}
                          className={styles.backgroundLayer}/>
                 </ScrollParallax>
-                <ScrollParallax strength={1.05} lerpEase={1} isAbsolutelyPositioned={false}>
+                <ScrollParallax strength={1.05} lerpEase={.95} isAbsolutelyPositioned={false}>
                     <div className={styles.titleContainer}>
                         <div className={styles.title}>uberboard.io</div>
                         <div className={styles.subtitle}>creating dashboards with style</div>
                     </div>
                 </ScrollParallax>
-                <ScrollParallax strength={.2} lerpEase={1} isAbsolutelyPositioned={true}>
+                <ScrollParallax strength={.4} lerpEase={.95} isAbsolutelyPositioned={true}>
                     <span style={{backgroundImage: "url('/background/ocean/SVG/layer1.svg')"}}
                          className={styles.backgroundLayer}/>
                 </ScrollParallax>
-                <ScrollParallax strength={0} lerpEase={1} isAbsolutelyPositioned={true}>
+                <ScrollParallax strength={0} lerpEase={.95} isAbsolutelyPositioned={true}>
                     <span style={{backgroundImage: "url('/background/ocean/SVG/layer0.svg')"}}
                          className={styles.backgroundLayer}/>
                 </ScrollParallax>

@@ -1,6 +1,6 @@
 'use client'
 import {Inter} from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Home.module.scss'
 import {Parallax, ParallaxProvider} from "react-scroll-parallax";
 
 const inter = Inter({subsets: ['latin']})

@@ -25,6 +25,7 @@
 }
 
 .titleContainer {
+  transform-origin: bottom left;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -53,6 +54,7 @@
 }
 
 .backgroundLayer {
+  transform-origin: bottom left;
   display: block;
   position: absolute;
   bottom: 0;

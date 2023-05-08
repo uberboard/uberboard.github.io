@@ -63,6 +63,7 @@ html {
 }
 
 body {
+  touch-action: pan-y;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,

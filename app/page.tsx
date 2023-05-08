@@ -47,7 +47,7 @@ export default function Home() {
                             <span data-ty>Successfully installed uberboard!</span>
                             <span data-ty="input" data-ty-prompt="~$">uberboard dashboard create my-dashboard</span>
                             <span data-ty="progress"></span>
-                            <span data-ty>Dashboard 'my-dashboard' created!</span>
+                            <span data-ty>Dashboard &apos;my-dashboard&apos; created!</span>
                             <span data-ty="input" data-ty-prompt="~$">cd my-dashboard</span>
                             <span data-ty="input" data-ty-delay="0" data-ty-prompt={"~/my-dashboard$"}>uberboard start</span>
                             <span data-ty>Dashboard is running at http://localhost:3000</span>

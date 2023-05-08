@@ -21,12 +21,14 @@
   width: 100%;
   max-width: var(--max-width);
   overflow: hidden;
+  position: relative;
 }
 
 .titleContainer {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 150px;
   @include for-phone-only {
     font-size: 60%;
   }
@@ -51,8 +53,9 @@
 }
 
 .backgroundLayer {
+  display: block;
   position: absolute;
-  top: 0;
+  bottom: 0;
   background-size: 100% auto;
   background-position: bottom;
   background-repeat: no-repeat;

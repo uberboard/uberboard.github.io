@@ -3,7 +3,7 @@ import {Metadata} from "next";
 import '../styles/globals.css';
 
 export const metadata: Metadata = {
-    title: 'ubnerboard.io',
+    title: 'uberboard.io',
     description: 'Welcome to uberboard.io',
     viewport: "width=device-width, initial-scale=1"
 };

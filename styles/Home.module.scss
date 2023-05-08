@@ -18,10 +18,15 @@
 
 .backgroundImage {
   height: 100vh;
+  min-height: 100vh;
   width: 100%;
   max-width: var(--max-width);
   overflow: hidden;
   position: relative;
+  @include for-phone-only {
+    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
+  }
 }
 
 .titleContainer {

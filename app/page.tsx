@@ -42,7 +42,7 @@ export default function Home() {
 
                     <div className={styles.center} >
                         <div id="termynal" data-termynal>
-                            <span data-ty="input" data-ty-prompt="~$">curl -o- https://uberboard.github.io/install.sh | bash</span>
+                            <span data-ty="input" data-ty-prompt="~$">curl -o- https://uberboard.io/install.sh | bash</span>
                             <span data-ty="progress"></span>
                             <span data-ty>Successfully installed uberboard!</span>
                             <span data-ty="input" data-ty-prompt="~$">uberboard dashboard create my-dashboard</span>

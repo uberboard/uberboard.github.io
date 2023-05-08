@@ -2,6 +2,7 @@
 import {Inter} from 'next/font/google'
 import styles from '@/styles/Home.module.scss'
 import {ScrollParallax} from "react-just-parallax";
+import '@/styles/termynal.css'
 
 const inter = Inter({subsets: ['latin']})
 
@@ -13,11 +14,11 @@ export default function Home() {
                     <span style={{backgroundImage: "url('/background/ocean/SVG/layer4.svg')"}}
                           className={styles.backgroundLayer}/>
                 </ScrollParallax>
-                <ScrollParallax strength={.9} lerpEase={1} isAbsolutelyPositioned={true}>
+                <ScrollParallax strength={.94} lerpEase={1} isAbsolutelyPositioned={true}>
                     <span style={{backgroundImage: "url('/background/ocean/SVG/layer3.svg')"}}
                           className={styles.backgroundLayer}/>
                 </ScrollParallax>
-                <ScrollParallax strength={.7} lerpEase={1} isAbsolutelyPositioned={true}>
+                <ScrollParallax strength={.8} lerpEase={1} isAbsolutelyPositioned={true}>
                     <span style={{backgroundImage: "url('/background/ocean/SVG/layer2.svg')"}}
                           className={styles.backgroundLayer}/>
                 </ScrollParallax>
@@ -39,15 +40,18 @@ export default function Home() {
             <div className={styles.container}>
                 <main className={styles.main}>
 
-                    <div className={styles.center}>
-                        <div className={styles.description}>
-                            <p>
-                                <code className={styles.code}>curl -o-
-                                    https://raw.githubusercontent.com/uberboard/uberboard-cli/main/install/install.sh |
-                                    bash</code>
-                            </p>
+                    <div className={styles.center} >
+                        <div id="termynal" data-termynal>
+                            <span data-ty="input" data-ty-prompt="~$">curl -o- https://uberboard.github.io/install.sh | bash</span>
+                            <span data-ty="progress"></span>
+                            <span data-ty>Successfully installed uberboard!</span>
+                            <span data-ty="input" data-ty-prompt="~$">uberboard dashboard create my-dashboard</span>
+                            <span data-ty="progress"></span>
+                            <span data-ty>Dashboard 'my-dashboard' created!</span>
+                            <span data-ty="input" data-ty-prompt="~$">cd my-dashboard</span>
+                            <span data-ty="input" data-ty-delay="0" data-ty-prompt={"~/my-dashboard$"}>uberboard start</span>
+                            <span data-ty>Dashboard is running at http://localhost:3000</span>
                         </div>
-
                     </div>
                     <div className={styles.center}>
                         <div className={styles.grid}>

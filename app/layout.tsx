@@ -1,6 +1,7 @@
 import React from "react";
 import {Metadata} from "next";
 import '../styles/globals.css';
+import Script from "next/script";
 
 export const metadata: Metadata = {
     title: 'uberboard.io',
@@ -16,6 +17,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>{children}</body>
+            <Script src="/libs/termynal.js" data-termynal-container="#termynal"></Script>
         </html>
     );
 }

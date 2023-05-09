@@ -2,6 +2,8 @@ import React from "react";
 import {Metadata} from "next";
 import '../styles/globals.css';
 import Script from "next/script";
+import Head from "next/head";
+import {Html} from "next/document";
 
 export const metadata: Metadata = {
     title: 'uberboard.io',
@@ -16,6 +18,19 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <head>
+                <Script id="etracker" type="text/javascript">
+                    {
+                    // var et_pagename = "";
+                    // var et_areas = "";
+                    // var et_tval = 0;
+                    // var et_tsale = 0;
+                    // var et_tonr = "";
+                    // var et_basket = "";
+                }
+                </Script>
+                <Script id="_etLoader" type="text/javascript" charset="UTF-8" data-block-cookies="true" data-secure-code="6ggwSE" src="//code.etracker.com/code/e.js" async></Script>
+            </head>
             <body>{children}</body>
             <Script src="/libs/termynal.js" data-termynal-container="#termynal"></Script>
         </html>

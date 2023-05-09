@@ -17,17 +17,27 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
-                <Script id="etracker" type="text/javascript">
-                    {
-                    // var et_pagename = "";
-                    // var et_areas = "";
-                    // var et_tval = 0;
-                    // var et_tsale = 0;
-                    // var et_tonr = "";
-                    // var et_basket = "";
+                {
+                    (process.env.ENABLE_ETRACKER === 'true') ?
+                        <Script hidden={process.env.ENABLE_ETRACKER !== 'true'} id="etracker" type="text/javascript">
+                            {
+                                // var et_pagename = "";
+                                // var et_areas = "";
+                                // var et_tval = 0;
+                                // var et_tsale = 0;
+                                // var et_tonr = "";
+                                // var et_basket = "";
+                            }
+                        </Script>
+                        : ''
                 }
-                </Script>
-                <Script id="_etLoader" type="text/javascript" data-block-cookies="true" data-secure-code="6ggwSE" src="//code.etracker.com/code/e.js" async></Script>
+
+                {
+                    (process.env.ENABLE_ETRACKER === 'true') ?
+                        <Script id="_etLoader" type="text/javascript" data-block-cookies="true" data-secure-code="6ggwSE" src="//code.etracker.com/code/e.js" async></Script>
+                        : ''
+                }
+
             </head>
             <body>{children}</body>
             <Script src="/libs/termynal.js" data-termynal-container="#termynal"></Script>

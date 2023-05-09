@@ -29,7 +29,7 @@ export default function RootLayout({
                     // var et_basket = "";
                 }
                 </Script>
-                <Script id="_etLoader" type="text/javascript" charset="UTF-8" data-block-cookies="true" data-secure-code="6ggwSE" src="//code.etracker.com/code/e.js" async></Script>
+                <Script id="_etLoader" type="text/javascript" data-block-cookies="true" data-secure-code="6ggwSE" src="//code.etracker.com/code/e.js" async></Script>
             </head>
             <body>{children}</body>
             <Script src="/libs/termynal.js" data-termynal-container="#termynal"></Script>

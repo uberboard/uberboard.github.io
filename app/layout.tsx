@@ -2,8 +2,6 @@ import React from "react";
 import {Metadata} from "next";
 import '../styles/globals.css';
 import Script from "next/script";
-import Head from "next/head";
-import {Html} from "next/document";
 
 export const metadata: Metadata = {
     title: 'uberboard.io',

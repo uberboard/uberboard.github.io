@@ -70,7 +70,6 @@ export default function Home() {
                             <a
                                 href="#"
                                 className={styles.card}
-                                target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <h2 className={inter.className}>
@@ -84,7 +83,6 @@ export default function Home() {
                             <a
                                 href="#"
                                 className={styles.card}
-                                target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 <h2 className={inter.className}>

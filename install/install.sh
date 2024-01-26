@@ -74,9 +74,48 @@ install_uberboard() {
 
   local FILENAME
   local OS
-  OS=$(uname -s | tr '[:upper:]' '[:lower:]')
+  OS_RAW=$(uname -s | tr '[:upper:]' '[:lower:]')
+
+  # Anpassung für Windows-Systeme
+  case "$OS_RAW" in
+      cygwin*|mingw*|msys*)
+          OS="win32"
+          ;;
+      darwin*)
+          OS="darwin"
+          ;;
+      linux*)
+          OS="linux"
+          ;;
+      *)
+          echo "Unsupported operation system: $OS_RAW"
+          exit 1
+          ;;
+  esac
+
+  # Bestimmen der Architektur
+  local ARCH_RAW=$(arch)
   local ARCH
-  ARCH=$(arch)
+  
+  case "$ARCH_RAW" in
+      aarch64)
+          ARCH="arm64"  # Für Darwin-Systeme
+          ;;
+      arm*)
+          ARCH="arm"    # Für Linux-Systeme
+          ;;
+      x86_64 | x64)
+          ARCH="x64"
+          ;;
+      i386 | i686)
+          ARCH="x86"  # Für Windows-Systeme
+          ;;
+      *)
+          echo "Unsupported architecture: $ARCH_RAW"
+          exit 1
+          ;;
+  esac
+
   FILENAME="uberboard-${OS}-${ARCH}.tar.gz"
 
   local UBERBOARD_CLI_URL="https://s3.eu-central-1.amazonaws.com/releases-uberboard-cli/channels/stable/${FILENAME}"

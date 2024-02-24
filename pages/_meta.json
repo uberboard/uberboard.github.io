@@ -1,6 +1,7 @@
 {
   "docs": {
     "title": "Documentation",
-    "type": "page"
+    "type": "page",
+    "display": "hidden"
   }
 }

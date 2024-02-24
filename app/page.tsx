@@ -56,7 +56,7 @@ export default function Home() {
                     <div className={styles.center}>
                         <div className={styles.grid}>
                             <a
-                                href="#"
+                                href="/docs"
                                 className={styles.card}
                             >
                                 <h2 className={inter.className}>
@@ -68,7 +68,7 @@ export default function Home() {
                             </a>
 
                             <a
-                                href="#"
+                                href="/docs"
                                 className={styles.card}
                                 rel="noopener noreferrer"
                             >
@@ -81,7 +81,7 @@ export default function Home() {
                             </a>
 
                             <a
-                                href="#"
+                                href="/docs"
                                 className={styles.card}
                                 rel="noopener noreferrer"
                             >

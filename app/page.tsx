@@ -3,6 +3,7 @@ import {Inter} from 'next/font/google'
 import styles from '@/styles/Home.module.scss'
 import {ScrollParallax} from "react-just-parallax";
 import '@/styles/termynal.css'
+import React from "react";
 
 const inter = Inter({subsets: ['latin']})
 

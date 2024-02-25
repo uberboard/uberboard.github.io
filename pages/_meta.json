@@ -1,5 +1,6 @@
 {
   "docs": {
-    "title": "Documentation"
+    "title": "Documentation",
+    "type":  "page"
   }
 }

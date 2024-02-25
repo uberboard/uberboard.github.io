@@ -1,62 +1,59 @@
-import { Steps } from 'nextra/components'
+import {Steps} from 'nextra/components'
 
 # Getting Started with ```uberboard```
 This guide will walk you through the basic steps to set up your own uberboard dashboard, create a view, and configure a shipper to manage data flow.
 
 <Steps>
-### Install ```'uberboard CLI'```
-If you haven't already installed the uberboard-cli tool, you can do so by
-running the following command in your terminal:
+    ### Initialize Your Dashboard
+    If you haven't already installed the uberboard-cli tool, you can find the different installation options for MacOS, Linux, and Windows on [this page](/docs/guide/install).
+    Once the ```uberboard``` is installed, you can initialize a new dashboard project by running:
 
-```bash copy
-curl -o- https://uberboard.io/install.sh | bash
-```
+    ```bash copy
+    uberboard dashboard create my-dashboard
+    ```
 
-This command downloads and runs the installation script from the official uberboard.io website, setting up the uberboard CLI tool on your system.
+    Replace ```'my-dashboard'``` with your desired project name. This command creates a new directory with the necessary
+    files to get started with your dashboard.
 
-### Initialize Your Dashboard
-Once the ```uberboard``` is installed, you can initialize a new dashboard project by running:
+    ### Create a View
+    A view in ```uberboard``` represents a specific layout or part of your dashboard that displays widgets or data
+    elements. To create a new view, use the uberboard CLI again:
 
-```bash copy
-uberboard dashboard create my-dashboard
-```
+    ```bash copy
+    uberboard views create my-view
+    ```
 
-Replace ```'my-dashboard'``` with your desired project name. This command creates a new directory with the necessary files to get started with your dashboard.
+    Replace ```'my-view'``` with a name for your view. After creating the view, you can configure it by adding widgets
+    or specifying data sources.
 
-### Create a View
-A view in ```uberboard``` represents a specific layout or part of your dashboard that displays widgets or data elements. To create a new view, use the uberboard CLI again:
+    ### Configure a Shipper
+    Shippers are responsible for collecting, processing, and sending data to your dashboard.
+    To set up a shipper, you'll need to configure it based on your data source and requirements. This
+    typically involves editing a configuration file or using the uberboard-cli to specify data sources, formats, and
+    other settings.
 
-```bash copy
-uberboard views create my-view
-```
+    ```bash copy
+    uberboard shippers create my-shipper
+    ```
 
-Replace ```'my-view'``` with a name for your view. After creating the view, you can configure it by adding widgets or specifying data sources.
+    ### Add Shipper And View To Your Dashboard
+    With your view created and shipper configured, you're now ready to use it in your dashboard. Edit
+    ```dashboard.hbs```
+    in the root of your dashboard folder and add the following line:
 
-### Configure a Shipper
-Shippers are responsible for collecting, processing, and sending data to your dashboard.
-To set up a shipper, you'll need to configure it based on your data source and requirements. This
-typically involves editing a configuration file or using the uberboard-cli to specify data sources, formats, and other settings.
+    ```html copy
+    <div data-widget data-view="my-view" data-shipper="my-shipper"></div>
+    ```
 
-```bash copy
-uberboard shippers create my-shipper
-```
+    ### Start Your Dashboard
+    With your view created and shipper configured, you're now ready to start your dashboard:
 
-### Add Shipper And View To Your Dashboard
-With your view created and shipper configured, you're now ready to use it in your dashboard. Edit ```dashboard.hbs```
-in the root of your dashboard folder and add the following line:
+    ```bash copy
+    uberboard start
+    ```
 
-```html copy
-<div data-widget data-view="my-view" data-shipper="my-shipper"></div>
-```
-
-### Start Your Dashboard
-With your view created and shipper configured, you're now ready to start your dashboard:
-
-```bash copy
-uberboard start
-```
-
-This command launches your dashboard, making it accessible for you to view and interact with the data and widgets you've configured.
+    This command launches your dashboard, making it accessible for you to view and interact with the data and widgets
+    you've configured.
 </Steps>
 
 ## Conclusion

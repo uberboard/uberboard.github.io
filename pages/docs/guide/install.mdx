@@ -1,0 +1,44 @@
+# Install ```'uberboard CLI'```
+On Linux or MacOS the best way to install ```uberboard CLI``` is by running the following command in your terminal:
+
+```bash copy
+curl -o- https://uberboard.io/install.sh | bash
+```
+
+This command downloads and runs the installation script from the official uberboard.io website, setting up the uberboard CLI tool on your system.
+
+## Alternative installation
+
+Alternatively you can download the latest version of the CLI tool for your platform directly from here:
+
+* [MacOS (ARM)](https://releases-uberboard-cli.s3.eu-central-1.amazonaws.com/channels/stable/uberboard-darwin-arm64.tar.gz)
+* [MacOS (Intel)](https://releases-uberboard-cli.s3.eu-central-1.amazonaws.com/channels/stable/uberboard-darwin-x64.tar.gz)
+* [Linux (ARM)](https://releases-uberboard-cli.s3.eu-central-1.amazonaws.com/channels/stable/uberboard-linux-arm.tar.gz)
+* [Linux (ARM 64-Bit)](https://releases-uberboard-cli.s3.eu-central-1.amazonaws.com/channels/stable/uberboard-linux-arm64.tar.gz)
+* [Linux (Intel 64-Bit)](https://releases-uberboard-cli.s3.eu-central-1.amazonaws.com/channels/stable/uberboard-linux-x64.tar.gz)
+* [Windows (64-Bit)](https://releases-uberboard-cli.s3.eu-central-1.amazonaws.com/channels/stable/uberboard-win32-x64.tar.gz)
+* [Windows (x86)](https://releases-uberboard-cli.s3.eu-central-1.amazonaws.com/channels/stable/uberboard-win32-x86.tar.gz)
+
+After extracting the files into a directory of your choice, you will need to add the directory to your system's PATH variable to ensure the executable can be found by your shell.
+Here's how you can do this on Windows, Linux, and MacOS:
+
+### Windows
+1. Right-click on 'This PC' or 'My Computer' and select 'Properties'.
+2. Click on 'Advanced system settings' and then 'Environment Variables'.
+3. Under 'System Variables', find the PATH variable and select it. Click 'Edit'.
+4. In the 'Edit Environment Variable' window, click 'New' and add the path to the directory where you extracted the files.
+5. Click 'OK' to close each window.
+
+
+### Linux and MacOS
+1. Open a terminal.
+2. Determine which shell you are using by running ```echo $SHELL```.
+3. Based on your shell, edit the appropriate configuration file in your home directory (```~/.bashrc```, ```~/.zshrc```, etc.) by adding the following line:
+    ```bash copy
+    export PATH=$PATH:/path/to/your/directory
+    ```
+
+4. Replace ```/path/to/your/directory``` with the actual path to the directory where you extracted the files.
+5. Save the file and reload the configuration by running source ```~/.bashrc``` (or the equivalent for your shell).
+
+By following these steps, you ensure that the ```uberboard``` executable is accessible from anywhere in your terminal.
